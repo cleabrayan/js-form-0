@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+section{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #161623;
+}
+section::before{
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: linear-gradient(#ffc107,#e91e63);
+    border-radius: 50%;
+    transform: translate(-250px,-120px);
+}
+section::after{
+    content: '';
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    background: linear-gradient(#2196f3,#31ff38);
+    border-radius: 50%;
+    transform: translate(250px,120px);
+
+
+}
+.box{
+    position: relative;
+    z-index: 999;
+}
+.container{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 18px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 25px 45px rgba(0,0,0,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    align-items: center;
+    backdrop-filter: blur(25px);
+}
+
+.container .frm_login .form_group{
+position: relative;
+margin-bottom: 25px;
+
+}
+.container .frm_login input{
+    width:300px;
+    padding: 5px;
+    font-size: 17px;
+    background: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #fff;
+    color: #fff !important;
+}.container .frm_login input::placeholder{
+    color: #fff;
+}
+.container .frm_login input:focus{
+    border-color: #007bff;
+    transition: all .3s;
+}
+.container 
+.btn-submit{
+    width: 300px;
+    padding:10px;
+    background: linear-gradient(45deg,#2196f3,#31ff38);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 15px;
+
+}
+.container .frm_login.invalid .email::before{
+    content: '';
+    position: absolute;
+    right: 3px;
+    top: 0px;
+    width: 23px;
+    height: 23px;
+    background: url(img/invalid.png);
+    background-size: cover;
+
+}
+.container .frm_login.valid .email::before{
+    content: '';
+    position: absolute;
+    right: 3px;
+    top: 0px;
+    width: 23px;
+    height: 23px;
+    background: url(img/valid.png);
+    background-size: cover;
+
+}
+.btn-submit:active{
+    background: #ffc107;
+    margin: 2px;
+    color: #fff;
+}
